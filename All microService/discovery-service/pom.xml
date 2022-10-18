@@ -42,7 +42,7 @@
     </dependencyManagement>
 
     <build>
-        <finalName>discovry-server</finalName>
+        <finalName>discovry</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
