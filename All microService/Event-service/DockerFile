@@ -1,4 +1,0 @@
-FROM openjdk:8
-ADD target/event.jar event-docker.jar
-EXPOSE 8081
-ENTRYPOINT ["java", "-jar", "event-docker.jar"]

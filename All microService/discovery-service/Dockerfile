@@ -1,4 +1,4 @@
 FROM openjdk:8
-ADD target/discovry.jar descovry-docker.jar
+ADD target/discovry.jar descovry-service.jar
 EXPOSE 8761
-ENTRYPOINT ["java", "-jar", "descovry-docker.jar"]
+ENTRYPOINT ["java", "-jar", "descovry-service.jar"]
