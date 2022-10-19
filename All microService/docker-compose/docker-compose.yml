@@ -19,5 +19,38 @@ services:
     ports:
       - "8762:8762"
     image: "zuul-service"
+  entretien:
+    build: ../entretienService
+    restart: always
+    ports:
+      - 8081:8081
+    depends_on:
+      - mysqldb
+  mysqldb:
+      image: "mysql:latest"
+      restart: always
+      ports:
+        - 3306:3306
+      environment:
+        MYSQL_DATABASE: entretien
+        MYSQL_USER: dzovi
+        MYSQL_PASSWORD: 1234
+        MYSQL_ROOT_PASSWORD: 1234
 
-
+  employee:
+    build: ../employeeServices
+    restart: always
+    ports:
+      - 8082:8082
+    depends_on:
+      - mysqldb1
+  mysqldb1:
+      image: "mysql:latest"
+      restart: always
+      ports:
+        - 3307:33060
+      environment:
+        MYSQL_DATABASE: employee
+        MYSQL_USER: dzovi
+        MYSQL_PASSWORD: 1234
+        MYSQL_ROOT_PASSWORD: 1234
