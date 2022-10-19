@@ -13,7 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "/event")
 public class EventRestAPI {
-
+    @GetMapping("/")
+    public String findOne(){
+        return  "Hello";
+    }
     @Autowired
     private IEventService iEventService;
 

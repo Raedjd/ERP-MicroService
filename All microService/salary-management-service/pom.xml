@@ -80,6 +80,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>salary-service</finalName>
 	</build>
 
 </project>
