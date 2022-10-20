@@ -12,6 +12,7 @@ import com.ms.authservice.repository.RoleRepository;
 import com.ms.authservice.repository.UserRepository;
 import com.ms.authservice.service.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -120,9 +121,17 @@ public class AuthController {
 
         return ResponseEntity.ok(new MessageResponse("User registered successfully!"));
     }
-    @GetMapping("/user")
-    @PreAuthorize("hasRole('USER')  or hasRole('ADMIN')")
-    public String userAccess() {
-        return "User Content.";
+    @GetMapping("/findAllUsers")
+    public List<User> retrieveAllJobs(){
+        return userRepository.findAll();
+    }
+    @GetMapping("/findUser/{id}")
+    public ResponseEntity<User>findOne(@PathVariable("id") Long id){
+        return  new ResponseEntity<User> ( userRepository.findById(id).orElse(new User()) , HttpStatus.OK);
+    }
+    @DeleteMapping("delete/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void createJob(@PathVariable("id") Long id) {
+        userRepository.deleteById(id);
     }
 }

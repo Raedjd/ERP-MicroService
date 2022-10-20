@@ -65,7 +65,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>job</finalName>
+		<finalName>job-service</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
