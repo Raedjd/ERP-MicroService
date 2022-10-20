@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Job-service" />
+        <module name="discovery-server" />
+        <module name="config-service" />
+        <module name="zuul-service" />
+        <module name="Event-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="auth-service" target="1.8" />
+      <module name="config-service" target="1.8" />
+      <module name="discovery-server" target="1.8" />
+      <module name="Event-service" target="1.8" />
+      <module name="Job-service" target="1.8" />
+      <module name="zuul-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Event-service" options="-parameters" />
+      <module name="Job-service" options="-parameters" />
+      <module name="config-service" options="-parameters" />
+      <module name="discovery-server" options="-parameters" />
+      <module name="zuul-service" options="-parameters" />
+    </option>
+  </component>
+</project>

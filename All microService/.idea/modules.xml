@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/All microService.iml" filepath="$PROJECT_DIR$/.idea/All microService.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Event-service/Event-service.iml" filepath="$PROJECT_DIR$/Event-service/Event-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Job-service/Job-service.iml" filepath="$PROJECT_DIR$/Job-service/Job-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/discovery-service/discovery-server.iml" filepath="$PROJECT_DIR$/discovery-service/discovery-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-service/zuul-service.iml" filepath="$PROJECT_DIR$/zuul-service/zuul-service.iml" />
+    </modules>
+  </component>
+</project>
