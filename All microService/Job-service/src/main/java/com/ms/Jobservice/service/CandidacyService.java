@@ -4,10 +4,12 @@ import com.ms.Jobservice.models.Candidacy;
 import com.ms.Jobservice.models.Job;
 import com.ms.Jobservice.repository.CandidacyRepository;
 import com.ms.Jobservice.repository.JobRepository;
+import com.ms.Jobservice.utils.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 @Service
 public class CandidacyService implements ICandidacyService{
@@ -16,10 +18,22 @@ public class CandidacyService implements ICandidacyService{
     @Autowired
     private CandidacyRepository candidacyRepository;
     @Override
-    public Candidacy addCandidacy(Long jobId, Candidacy candidacy) {
+    public Candidacy addCandidacy(Long jobId, Candidacy candidacy,MultipartFile file) throws IOException {
         Job job = jobRepository.findById(jobId).get();
-        candidacy.setJob(job);
-        return candidacyRepository.save(candidacy);
+        return candidacyRepository.save(Candidacy.builder().fullName(candidacy.getFullName())
+                .phoneNumber(candidacy.getPhoneNumber())
+                .email(candidacy.getEmail())
+                .linkedinPath(candidacy.getLinkedinPath())
+                .job(job)
+                .resumeName(file.getOriginalFilename())
+                .resumeType(file.getContentType())
+                .resumeData(FileUtils.compressFile(file.getBytes())).build());
+    }
+    @Override
+    public byte[] downloadResume(Long id){
+        Candidacy candidacy = candidacyRepository.findById(id).get();
+        byte[] resume=FileUtils.decompressFile(candidacy.getResumeData());
+        return resume;
     }
 
     @Override
