@@ -72,6 +72,60 @@ services:
         MYSQL_PASSWORD: 1234
         MYSQL_ROOT_PASSWORD: 1234
         MYSQL_TCP_PORT: 3308
+  leave:
+    build: ../leave-management-service
+    restart: always
+    ports:
+      - 8084:8084
+    depends_on:
+      - mysqldb3
+  mysqldb3:
+      image: "mysql:latest"
+      restart: always
+      ports:
+        - 3309:3309
+      environment:
+        MYSQL_DATABASE: leaveDB
+        MYSQL_USER: raed
+        MYSQL_PASSWORD: 1234
+        MYSQL_ROOT_PASSWORD: 1234
+        MYSQL_TCP_PORT: 3309
+  auth:
+    build: ../auth-service
+    restart: always
+    ports:
+      - 8085:8085
+    depends_on:
+      - mysqldb4
+  mysqldb4:
+      image: "mysql:latest"
+      restart: always
+      ports:
+        - 3310:3310
+      environment:
+        MYSQL_DATABASE: auth-db
+        MYSQL_USER: khouloud
+        MYSQL_PASSWORD: 1234
+        MYSQL_ROOT_PASSWORD: 1234
+        MYSQL_TCP_PORT: 3310
+  job:
+    build: ../Job-service
+    restart: always
+    ports:
+      - 8086:8086
+    depends_on:
+      - mysqldb5
+  mysqldb5:
+      image: "mysql:latest"
+      restart: always
+      ports:
+        - 3311:3311
+      environment:
+        MYSQL_DATABASE: job-db
+        MYSQL_USER: jaidi
+        MYSQL_PASSWORD: 1234
+        MYSQL_ROOT_PASSWORD: 1234
+        MYSQL_TCP_PORT: 3311
   department:
     build: ../departmentService
     ports:

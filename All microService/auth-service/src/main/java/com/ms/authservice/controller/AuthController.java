@@ -131,7 +131,12 @@ public class AuthController {
     }
     @DeleteMapping("delete/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public void createJob(@PathVariable("id") Long id) {
+    public void deleteUser(@PathVariable("id") Long id) {
         userRepository.deleteById(id);
+    }
+
+    @PostMapping("/addRole")
+    public ResponseEntity<Role>saveRole(@RequestBody Role role){
+        return new ResponseEntity<Role>( roleRepository.save(role), HttpStatus.CREATED) ;
     }
 }
