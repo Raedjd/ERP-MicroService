@@ -17,9 +17,6 @@ public class salaryRestAPI {
     @Autowired
     private ISalaryService iSalaryService;
 
-    @Autowired
-    SalaryRepository eventRepository;
-
 
     @PostMapping("/add")
     public ResponseEntity<Salary> CreateSalary(@RequestBody Salary salary){
