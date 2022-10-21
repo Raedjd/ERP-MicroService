@@ -23,8 +23,7 @@ const Loading = () => {
   return (
     <StyledLoading>
       <Box position="relative">
-        <img src="/assets/images/logo-circle.svg" alt="" />
-        <CircularProgress className="circleProgress" />
+              <CircularProgress className="circleProgress" />
       </Box>
     </StyledLoading>
   );

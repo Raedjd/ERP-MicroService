@@ -2,75 +2,49 @@ export const navigations = [
   { name: 'Dashboard', path: '/dashboard', icon: 'dashboard' },
   { label: 'PAGES', type: 'label' },
   {
-    name: 'User',
-    icon: 'security',
+    name: 'Actuality',
+    icon: 'crop_rotate',
     children: [
-      { name: 'Users', iconText: 'SI', path: '/dashboard/listusers' },
-      { name: 'Profil', iconText: 'SI', path: '/dashboard/profil' },
+      { name: 'Posts', iconText: 'account_circle', path: '/dashboard/actuality',icon: 'border_color' },
+
 
     ],
   },
   {
-    name: 'Session/Auth',
-    icon: 'security',
+    name: 'Users',
+    icon: 'accessibility',
     children: [
-      { name: 'Sign in', iconText: 'SI', path: '/session/signin' },
-      { name: 'Sign up', iconText: 'SU', path: '/session/signup' },
-      { name: 'Forgot Password', iconText: 'FP', path: '/session/forgot-password' },
-      { name: 'Error', iconText: '404', path: '/session/404' },
+      { name: 'All users', iconText: 'account_circle', path: '/dashboard/listusers',icon: ' wc' },
+      { name: 'Profil', iconText: 'SI', path: '/dashboard/profil',icon: 'account_circle' },
+
     ],
   },
   {
-    name: 'Session/Auth',
-    icon: 'security',
+    name: 'Events',
+    icon: 'nature_people',
     children: [
-      { name: 'Sign in', iconText: 'SI', path: '/session/signin' },
-      { name: 'Sign up', iconText: 'SU', path: '/session/signup' },
-      { name: 'Forgot Password', iconText: 'FP', path: '/session/forgot-password' },
-      { name: 'Error', iconText: '404', path: '/session/404' },
+      { name: 'Add event', iconText: 'account_circle', path: '/dashboard/event',icon: ' cake' },
+      { name: 'Events done', iconText: 'account_circle', path: '/dashboard/eventsdone',icon: ' offline_pin' },
+    ],
+  },
+
+  {
+    name: 'Products',
+    icon: 'local_parking',
+    children: [
+      { name: 'Add product', iconText: 'account_circle', path: '/dashboard/product',icon: ' add_circle' },
+
+
     ],
   },
   {
-    name: 'Session/Auth',
-    icon: 'security',
+    name: 'Tools',
+    icon: 'build',
     children: [
-      { name: 'Sign in', iconText: 'SI', path: '/session/signin' },
-      { name: 'Sign up', iconText: 'SU', path: '/session/signup' },
-      { name: 'Forgot Password', iconText: 'FP', path: '/session/forgot-password' },
-      { name: 'Error', iconText: '404', path: '/session/404' },
+      { name: 'Add tools', iconText: 'account_circle', path: '/dashboard/tools',icon: 'desktop_mac' },
+
+
     ],
   },
-  { label: 'Components', type: 'label' },
-  {
-    name: 'Components',
-    icon: 'favorite',
-    badge: { value: '30+', color: 'secondary' },
-    children: [
-      { name: 'Auto Complete', path: '/material/autocomplete', iconText: 'A' },
-      { name: 'Buttons', path: '/material/buttons', iconText: 'B' },
-      { name: 'Checkbox', path: '/material/checkbox', iconText: 'C' },
-      { name: 'Dialog', path: '/material/dialog', iconText: 'D' },
-      { name: 'Expansion Panel', path: '/material/expansion-panel', iconText: 'E' },
-      { name: 'Form', path: '/material/form', iconText: 'F' },
-      { name: 'Icons', path: '/material/icons', iconText: 'I' },
-      { name: 'Menu', path: '/material/menu', iconText: 'M' },
-      { name: 'Progress', path: '/material/progress', iconText: 'P' },
-      { name: 'Radio', path: '/material/radio', iconText: 'R' },
-      { name: 'Switch', path: '/material/switch', iconText: 'S' },
-      { name: 'Slider', path: '/material/slider', iconText: 'S' },
-      { name: 'Snackbar', path: '/material/snackbar', iconText: 'S' },
-      { name: 'Table', path: '/material/table', iconText: 'T' },
-    ],
-  },
-  {
-    name: 'Charts',
-    icon: 'trending_up',
-    children: [{ name: 'Echarts', path: '/charts/echarts', iconText: 'E' }],
-  },
-  {
-    name: 'Documentation',
-    icon: 'launch',
-    type: 'extLink',
-    path: 'http://demos.ui-lib.com/matx-react-doc/',
-  },
+
 ];

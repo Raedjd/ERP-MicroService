@@ -1,54 +1,112 @@
+import {Autocomplete, Box, Fab, Icon} from '@mui/material';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import TextField from '@mui/material/TextField';
+import React , {useState} from "react";
+import {fetchDepartmentData, fetchUserData, getToken} from "../../../auth/RoutsData";
+import axios from "../../../../axios";
 
-import {
 
-    Button,
+export default function FormDialogProduct() {
+    const [open, setOpen] = React.useState(false);
 
-    Grid,
-    Icon,
+    function handleClickOpen() {
+        setOpen(true);
+    }
 
-    styled,
-} from "@mui/material";
-import { Span } from "app/components/Typography";
-import React, { useEffect, useState } from "react";
-import { TextValidator, ValidatorForm } from "react-material-ui-form-validator";
-import {FileDownloadDone, FileUpload} from "@mui/icons-material";
+    function handleClose() {
+        setOpen(false);
+    }
+    const [userData,setUserData]=useState("");
+    const [rl,setRl]=useState(true);
+    React.useEffect(()=>{
+        fetchUserData().then((response)=>{
+            setUserData(response.data);
+            setRl(response.data.role=="Enginner");
 
-const TextField = styled(TextValidator)(() => ({
-    width: "100%",
-    marginBottom: "16px",
-}));
+        })
+    },[])
+    const [depData,setDepData]=useState([{}]);
+    React.useEffect(()=>{
+        fetchDepartmentData().then((response)=>{
+            setDepData(response.data);
+        })
+    },[])
+    const [nameProduct,setNameProduct]=useState("");
+    const [nameDep,setNameDep]=useState("");
+    const addProduct = async (e) => {
+        e.preventDefault();
+        await axios({
+            method: "post",
+            url: `${process.env.REACT_APP_API_URL}/product/add/${nameDep}`,
 
-const Productform = () => {
+            data: {
+                nameProduct:nameProduct,
+                userid:userData.id
 
+
+            },
+            headers: {
+                'Authorization': 'Bearer ' + getToken()
+            }
+        }).then((response)=>{
+            window.location.reload();
+        })
+
+    }
 
     return (
-        <div>
-            <ValidatorForm  onError={() => null}>
+        <Box>
 
-                <Grid item lg={6} md={6} sm={12} xs={12} sx={{ mt: 2 }}>
+            <Fab variant="extended" aria-label="Delete" className="button" onClick={handleClickOpen} disabled={!rl}>
+                <Icon sx={{ mr: 4 }}>add_circle_outline</Icon>
+                Add product(Except that Enginner)
+            </Fab>
+
+            <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <form >
+                <DialogTitle id="form-dialog-title">Add product</DialogTitle>
+
+                <DialogContent>
+
                     <TextField
+                        autoFocus
+                        margin="dense"
+                        id="product"
+                        label="Name of product"
                         type="text"
-                        name="product"
-                        label=" Name of product"
-                        id="standard-basic"
-
+                        fullWidth
+                        onChange={(e) =>setNameProduct(e.target.value)}
+                        value={nameProduct}
+                        sx={{ width: 400}}
                     />
+                    <Autocomplete
+                        options={depData}
+                        getOptionLabel={(option) => option.nameDepart}
+                        onChange={(e , v) => setNameDep(v.nameDepart) }
+                        renderInput={(params) => (
+                            <TextField {...params} label="Assign to department" variant="outlined" fullWidth
+                                       sx={{ width: 400}}
 
 
-                </Grid>
+                            />
+                        )}
+                    />
+                </DialogContent>
+                <DialogActions>
+                    <Button variant="outlined" color="secondary" onClick={handleClose}>
+                        Cancel
+                    </Button>
+                    <Button onClick={addProduct} color="primary" disabled={!nameProduct || !nameDep}>
+                        save
+                    </Button>
 
-
-
-
-                <Button color="primary" variant="contained" type="submit">
-                    <Icon>send</Icon>
-                    <Span sx={{ pl: 1, textTransform: "capitalize" }}>Add product</Span>
-                </Button>
-            </ValidatorForm>
-
-
-        </div>
+                </DialogActions>
+            </form>
+            </Dialog>
+        </Box>
     );
-};
-
-export default Productform;
+}

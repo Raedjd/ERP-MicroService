@@ -1,6 +1,5 @@
 import { Box, Button, styled } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
-
 const FlexBox = styled(Box)(() => ({
   display: 'flex',
   alignItems: 'center',
@@ -30,13 +29,13 @@ const NotFound = () => {
   return (
     <NotFoundRoot>
       <JustifyBox>
-        <IMG src="/assets/images/illustrations/404.svg" alt="" />
+     <p> 404 not found  </p>
 
         <Button
-          color="primary"
+            style={{background:"#FF4500"}}
           variant="contained"
           sx={{ textTransform: 'capitalize' }}
-          onClick={() => navigate(-1)}
+          onClick={() => navigate("/dashboard")}
         >
           Go Back
         </Button>

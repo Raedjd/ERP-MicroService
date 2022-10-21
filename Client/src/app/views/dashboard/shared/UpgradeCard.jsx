@@ -27,7 +27,7 @@ const UpgradeCard = () => {
   return (
     <CardRoot>
       <StyledCard elevation={0}>
-        <img src="/assets/images/illustrations/upgrade.svg" alt="upgrade" />
+        <img src="/src/illustrations/upgrade.svg" alt="upgrade" />
 
         <Paragraph>
           Upgrade to <b>MatX PRO</b> for <br /> more resources
