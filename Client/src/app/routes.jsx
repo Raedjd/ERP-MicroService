@@ -1,23 +1,24 @@
 import AuthGuard from 'app/auth/AuthGuard';
+import chartsRoute from 'app/views/charts/ChartsRoute';
 import dashboardRoutes from 'app/views/dashboard/DashboardRoutes';
+import materialRoutes from 'app/views/material-kit/MaterialRoutes';
 import NotFound from 'app/views/sessions/NotFound';
 import sessionRoutes from 'app/views/sessions/SessionRoutes';
 import { Navigate } from 'react-router-dom';
-
-import Layout1 from "./components/MatxLayout/Layout1/Layout1";
+import MatxLayout from './components/MatxLayout/MatxLayout';
 
 const routes = [
   {
     element: (
       <AuthGuard>
-        <Layout1/>
+        <MatxLayout />
       </AuthGuard>
     ),
-    children: [...dashboardRoutes],
+    children: [...dashboardRoutes, ...chartsRoute, ...materialRoutes],
   },
   ...sessionRoutes,
-  { path: '*', element: <Navigate to="login" />},
-
+  { path: '/', element: <Navigate to="login" /> },
+  { path: '*', element: <NotFound /> },
 ];
 
 export default routes;

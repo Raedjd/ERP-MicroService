@@ -40,7 +40,7 @@ const ForgotPassword = () => {
         <Grid container>
           <Grid item xs={12}>
             <JustifyBox p={4}>
-              <img width="300" src="/src/illustrations/dreamer.svg" alt="" />
+              <img width="300" src="/assets/images/illustrations/dreamer.svg" alt="" />
             </JustifyBox>
 
             <ContentBox>

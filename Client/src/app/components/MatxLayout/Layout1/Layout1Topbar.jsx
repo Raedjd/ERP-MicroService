@@ -1,14 +1,17 @@
-import {Avatar, Badge, Hidden, Icon, IconButton, MenuItem, useMediaQuery} from '@mui/material';
+import { Avatar, Hidden, Icon, IconButton, MenuItem, useMediaQuery } from '@mui/material';
 import { Box, styled, useTheme } from '@mui/system';
 import { MatxMenu, MatxSearchBox } from 'app/components';
 import { themeShadows } from 'app/components/MatxTheme/themeColors';
+import { NotificationProvider } from 'app/contexts/NotificationContext';
+import useAuth from 'app/hooks/useAuth';
 import useSettings from 'app/hooks/useSettings';
 import { topBarHeight } from 'app/utils/constant';
-import React, {useState} from 'react';
-import {Link, useNavigate} from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { Span } from '../../../components/Typography';
-import cookie from "js-cookie";
-import {fetchUserData} from "../../../auth/RoutsData";
+import NotificationBar from '../../NotificationBar/NotificationBar';
+import ShoppingCart from '../../ShoppingCart';
+
 const StyledIconButton = styled(IconButton)(({ theme }) => ({
   color: theme.palette.text.primary,
 }));
@@ -62,38 +65,15 @@ const StyledItem = styled(MenuItem)(({ theme }) => ({
   '& span': { marginRight: '10px', color: theme.palette.text.primary },
 }));
 
-
-const StyledBadge = styled(Badge)(({ theme }) => ({
-  '& .MuiBadge-badge': {
-    backgroundColor: '#44b700',
-    color: '#44b700',
-    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-    '&::after': {
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      borderRadius: '50%',
-      animation: 'ripple 1.2s infinite ease-in-out',
-      border: '1px solid currentColor',
-      content: '""',
-    },
-  },
-  '@keyframes ripple': {
-    '0%': {
-      transform: 'scale(.8)',
-      opacity: 1,
-    },
-    '100%': {
-      transform: 'scale(2.4)',
-      opacity: 0,
-    },
-  },
+const IconBox = styled('div')(({ theme }) => ({
+  display: 'inherit',
+  [theme.breakpoints.down('md')]: { display: 'none !important' },
 }));
+
 const Layout1Topbar = () => {
   const theme = useTheme();
   const { settings, updateSettings } = useSettings();
+  const { logout, user } = useAuth();
   const isMdScreen = useMediaQuery(theme.breakpoints.down('md'));
 
   const updateSidebarMode = (sidebarSettings) => {
@@ -113,38 +93,6 @@ const Layout1Topbar = () => {
     updateSidebarMode({ mode });
   };
 
-  const [userData,setUserData]=useState({});
-  const [avatarData,setAvatarData]=useState("");
-
-  React.useEffect(()=>{
-    fetchUserData().then((response)=>{
-      setUserData(response.data);
-       setAvatarData(response.data.image.imageUrl)
-    }).catch((e)=>{
-      removeCookie("jwt");
-      navigate("*");
-    })
-  },[])
-
-  const removeCookie = (key) => {
-    if (window !== "undefined") {
-      cookie.remove(key, { expires: 1 });
-    }
-  };
-  const navigate = useNavigate();
-  const handlelogout =  () => {
-
-    removeCookie("jwt");
-    navigate("*");
-
-  }
-
-  const [rl,setRl]=useState(true);
-  React.useEffect(()=>{
-    fetchUserData().then((response)=>{
-      setRl(response.data.role==="Admin")
-    })
-  },[])
   return (
     <TopbarRoot>
       <TopbarContainer>
@@ -153,50 +101,64 @@ const Layout1Topbar = () => {
             <Icon>menu</Icon>
           </StyledIconButton>
 
+          <IconBox>
+            <StyledIconButton>
+              <Icon>mail_outline</Icon>
+            </StyledIconButton>
+
+            <StyledIconButton>
+              <Icon>web_asset</Icon>
+            </StyledIconButton>
+
+            <StyledIconButton>
+              <Icon>star_outline</Icon>
+            </StyledIconButton>
+          </IconBox>
         </Box>
 
         <Box display="flex" alignItems="center">
           <MatxSearchBox />
 
+          <NotificationProvider>
+            <NotificationBar />
+          </NotificationProvider>
 
+          <ShoppingCart />
 
           <MatxMenu
             menuButton={
               <UserMenu>
                 <Hidden xsDown>
                   <Span>
-                    Hi <strong>{userData.username}</strong>
+                    Hi <strong>{user.name}</strong>
                   </Span>
                 </Hidden>
-                <StyledBadge
-                    overlap="circular"
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-                    variant="dot"
-                >
-                  <Avatar src={avatarData} />
-                </StyledBadge>
+                <Avatar src={user.avatar} sx={{ cursor: 'pointer' }} />
               </UserMenu>
             }
           >
-            <div hidden={!rl}>
-              <StyledItem >
-                <Link to="/dashboard/admin">
-                  <Icon> home </Icon>
-                  <Span> Admin space </Span>
-                </Link>
-              </StyledItem>
-            </div>
             <StyledItem>
-              <Link to="/dashboard/profil">
+              <Link to="/">
+                <Icon> home </Icon>
+                <Span> Home </Span>
+              </Link>
+            </StyledItem>
+
+            <StyledItem>
+              <Link to="/page-layouts/user-profile">
                 <Icon> person </Icon>
                 <Span> Profile </Span>
               </Link>
             </StyledItem>
 
+            <StyledItem>
+              <Icon> settings </Icon>
+              <Span> Settings </Span>
+            </StyledItem>
 
-            <StyledItem onClick={handlelogout} >
+            <StyledItem onClick={logout}>
               <Icon> power_settings_new </Icon>
-              <Span > Logout </Span>
+              <Span> Logout </Span>
             </StyledItem>
           </MatxMenu>
         </Box>

@@ -1,8 +1,5 @@
 import { Box, Card, Grid, Icon, IconButton, styled, Tooltip } from '@mui/material';
 import { Small } from 'app/components/Typography';
-import React, {useState} from "react";
-import axios from "../../../../axios";
-import {getToken} from "../../../auth/RoutsData";
 
 const StyledCard = styled(Card)(({ theme }) => ({
   display: 'flex',
@@ -31,165 +28,34 @@ const Heading = styled('h6')(({ theme }) => ({
 }));
 
 const StatCards = () => {
-  const [countUsers,setCountUsers]=useState('');
-  React.useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: `${process.env.REACT_APP_API_URL}/user/countusers`,
-      headers: {
-        'Authorization': 'Bearer ' + getToken()
-      }
-    }).then((response)=>{
-    setCountUsers(response.data)
-
-
-    })
-  },[])
-  const [countDepart,setCountDepart]=useState('');
-  React.useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: `${process.env.REACT_APP_API_URL}/dep/countdepartments`,
-      headers: {
-        'Authorization': 'Bearer ' + getToken()
-      }
-    }).then((response)=>{
-      setCountDepart(response.data)
-
-
-    })
-  },[])
-
-  const [countEvent,setCountEvent]=useState('');
-  React.useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: `${process.env.REACT_APP_API_URL}/event/countevents`,
-      headers: {
-        'Authorization': 'Bearer ' + getToken()
-      }
-    }).then((response)=>{
-      setCountEvent(response.data)
-
-
-    })
-  },[])
-  const [countTools,setCountTools]=useState('');
-  React.useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: `${process.env.REACT_APP_API_URL}/tools/counttools`,
-      headers: {
-        'Authorization': 'Bearer ' + getToken()
-      }
-    }).then((response)=>{
-      setCountTools(response.data)
-
-
-    })
-  },[])
-  const [countPosts,setCountPosts]=useState('');
-  React.useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: `${process.env.REACT_APP_API_URL}/post/countposts`,
-      headers: {
-        'Authorization': 'Bearer ' + getToken()
-      }
-    }).then((response)=>{
-      setCountPosts(response.data)
-
-
-    })
-  },[])
-  const [countProds,setCountProds]=useState('');
-  React.useEffect(()=>{
-    axios({
-      method: 'GET',
-      url: `${process.env.REACT_APP_API_URL}/product/countproducts`,
-      headers: {
-        'Authorization': 'Bearer ' + getToken()
-      }
-    }).then((response)=>{
-      setCountProds(response.data)
-
-
-    })
-  },[])
+  const cardList = [
+    { name: 'New Leads', amount: 3050, icon: 'group' },
+    { name: 'This week Sales', amount: '$80,500', icon: 'attach_money' },
+    { name: 'Inventory Status', amount: '8.5% Stock Surplus', icon: 'store' },
+    { name: 'Orders to deliver', amount: '305 Orders', icon: 'shopping_cart' },
+  ];
 
   return (
     <Grid container spacing={3} sx={{ mb: '24px' }}>
-
-        <Grid item xs={10} md={6} >
+      {cardList.map((item, index) => (
+        <Grid item xs={12} md={6} key={index}>
           <StyledCard elevation={6}>
             <ContentBox>
-              <Icon className="icon">group</Icon>
+              <Icon className="icon">{item.icon}</Icon>
               <Box ml="12px">
-                <Small>Users</Small>
-                <Heading>{countUsers}</Heading>
+                <Small>{item.name}</Small>
+                <Heading>{item.amount}</Heading>
               </Box>
             </ContentBox>
+
+            <Tooltip title="View Details" placement="top">
+              <IconButton>
+                <Icon>arrow_right_alt</Icon>
+              </IconButton>
+            </Tooltip>
           </StyledCard>
         </Grid>
-
-      <Grid item xs={10} md={6} >
-        <StyledCard elevation={6}>
-          <ContentBox>
-            <Icon className="icon">account_balance</Icon>
-            <Box ml="12px">
-              <Small>Departments</Small>
-              <Heading>{countDepart}</Heading>
-            </Box>
-          </ContentBox>
-        </StyledCard>
-      </Grid>
-
-      <Grid item xs={10} md={6} >
-        <StyledCard elevation={6}>
-          <ContentBox>
-            <Icon className="icon">cake</Icon>
-            <Box ml="12px">
-              <Small>Events</Small>
-              <Heading>{countEvent}</Heading>
-            </Box>
-          </ContentBox>
-        </StyledCard>
-      </Grid>
-      <Grid item xs={10} md={6} >
-        <StyledCard elevation={6}>
-          <ContentBox>
-            <Icon className="icon">build</Icon>
-            <Box ml="12px">
-              <Small>Tools</Small>
-              <Heading>{countTools}</Heading>
-            </Box>
-          </ContentBox>
-        </StyledCard>
-      </Grid>
-
-      <Grid item xs={10} md={6} >
-        <StyledCard elevation={6}>
-          <ContentBox>
-            <Icon className="icon">local_parking</Icon>
-            <Box ml="12px">
-              <Small>Products</Small>
-              <Heading>{countProds}</Heading>
-            </Box>
-          </ContentBox>
-        </StyledCard>
-      </Grid>
-      <Grid item xs={10} md={6} >
-        <StyledCard elevation={6}>
-          <ContentBox>
-            <Icon className="icon">border_color</Icon>
-            <Box ml="12px">
-              <Small>Posts</Small>
-              <Heading>{countPosts}</Heading>
-            </Box>
-          </ContentBox>
-        </StyledCard>
-      </Grid>
-
+      ))}
     </Grid>
   );
 };
