@@ -14,10 +14,7 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { Breadcrumb, SimpleCard } from "app/components";
 import axios from "axios";
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
-=======
 import SimpleTable from "../../material-kit/tables/SimpleTable";
->>>>>>> 4a9d919c84f696a141c41f7a1a35f00ab1495058
 import AddEmployee from "./AddEmployee";
 
 const Container = styled("div")(({ theme }) => ({
