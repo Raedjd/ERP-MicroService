@@ -24,9 +24,9 @@ const Brand = ({ children }) => {
   return (
     <BrandRoot>
       <Box display="flex" alignItems="center">
-
+        <MatxLogo />
         <StyledSpan mode={mode} className="sidenavHoverShow">
-         New Access
+          Matx
         </StyledSpan>
       </Box>
 

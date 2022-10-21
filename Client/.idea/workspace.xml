@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a03a1465-869f-4ded-9801-afeb5685aa81" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../All microService/eventMS/Database/Data/Events.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../All microService/eventMS/Database/Data/Events.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../All microService/eventMS/src/main/java/com/ms/eventms/controller/EventRestAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../All microService/eventMS/src/main/java/com/ms/eventms/controller/EventRestAPI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/404.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/new.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/newaccess.jfif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/scr1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/slide-1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/slide-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/img/slide/slide-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/scss/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/animate.css/animate.compat.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/animate.css/animate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/animate.css/animate.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/aos/aos.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/aos/aos.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap-icons/bootstrap-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap-icons/bootstrap-icons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap-icons/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.rtl.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.esm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.esm.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.esm.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/bootstrap/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/animations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/boxicons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/boxicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/css/transformations.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/boxicons/fonts/boxicons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/glightbox/css/glightbox.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/glightbox/css/glightbox.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/glightbox/css/plyr.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/glightbox/css/plyr.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/glightbox/js/glightbox.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/glightbox/js/glightbox.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/isotope-layout/isotope.pkgd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/isotope-layout/isotope.pkgd.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/php-email-form/validate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/swiper/swiper-bundle.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/swiper/swiper-bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/vendor/waypoints/noframework.waypoints.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/AuthGuard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/AuthGuard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/RoutsData.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Brand.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Brand.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/MatxLayout/Layout1/Layout1.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MatxLayout/Layout1/Layout1.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/MatxLayout/Layout1/Layout1Topbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MatxLayout/Layout1/Layout1Topbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/MatxLayout/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MatxLayout/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/MatxLoading.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/MatxLoading.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/SecondarySidebar/SecondarySidebarContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/SecondarySidebar/SecondarySidebarContent.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navigations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navigations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/routes.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/routes.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/cardFeedback.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/likePost.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/posDetails.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/showLike.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/userPostAvatarData.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/userPostDelete.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/userPostEdit.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/UserPostData/userPostNameData.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/actuality.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/cardPost.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Actuality/post.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Analytics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/Analytics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/DashboardRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/DashboardRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/FormDialogProddelete.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/FormDialogProdupdate.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/SimpleDialogUser.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/product.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/product.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/productform.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/productform.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/productlist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/Prouduct/productlist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/admin/SimpleDialogProduct.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/admin/SimpleDialogTools.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/admin/SimpleDialogUsers.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/admin/TopSellingDepartment.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/admin/admin.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/admin/dialogDepartment.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/EventByparticipant.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/Eventform.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/FormDialogEventdelete.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/FormDialogEventupdate.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/SimpleDialogUserevent.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/descriptionEvent.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/done.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/event.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/eventlist.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/eventsdone.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/listeventdones.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/participation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/rating.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/event/score.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/shared/StatCards.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/shared/StatCards.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/shared/UpgradeCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/shared/UpgradeCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/tools/FormDialogToolsdelete.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/tools/FormDialogToolsupdate.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/tools/SimpleDialogUserTools.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/tools/tools.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/tools/tools.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/tools/toolsform.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/tools/toolsform.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/tools/toolslist.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/tools/toolslist.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/user/Listusers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/user/Listusers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/user/Profiluser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/user/Profiluser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/user/setting.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/user/settings.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/utilis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/sessions/ForgotPassword.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/sessions/ForgotPassword.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/sessions/JwtLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/sessions/JwtLogin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/sessions/NotFound.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/sessions/NotFound.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/sessions/SessionRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/sessions/SessionRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2GSQZqi4pUk3xRDFKTo3YZ8veKT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a03a1465-869f-4ded-9801-afeb5685aa81" name="Changes" comment="" />
+      <created>1666379569189</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666379569189</updated>
+      <workItem from="1666379570914" duration="7969000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

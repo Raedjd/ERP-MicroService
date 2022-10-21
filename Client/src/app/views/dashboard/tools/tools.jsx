@@ -1,8 +1,9 @@
 import { Stack } from "@mui/material";
 import { Box, styled } from "@mui/system";
 import { Breadcrumb, SimpleCard } from "app/components";
-import FormDialogTools from "./toolsform";
+import Toolsform from "./toolsform";
 import Toolslist from "./toolslist";
+
 
 
 const Container = styled("div")(({ theme }) => ({
@@ -14,10 +15,8 @@ const Container = styled("div")(({ theme }) => ({
     },
 }));
 
+
 const Tools = () => {
-
-
-
     return (
         <Container>
             <Box className="breadcrumb">
@@ -25,8 +24,10 @@ const Tools = () => {
             </Box>
 
             <Stack spacing={3}>
-                <SimpleCard title="Add tools">
-                    <FormDialogTools/>
+                <SimpleCard title="Tools">
+                 <Toolsform/>
+                </SimpleCard>
+                <SimpleCard title="List tools">
                     <Toolslist/>
                 </SimpleCard>
 

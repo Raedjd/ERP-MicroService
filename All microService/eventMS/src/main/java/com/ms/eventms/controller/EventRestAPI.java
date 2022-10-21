@@ -27,14 +27,14 @@ public class EventRestAPI {
     }
 
     @GetMapping("/findAll")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseBody
     public List<Event> EventList(){
         return iEventService.findAll();
     }
 
     @GetMapping("/find/{id}")
-    public ResponseEntity<Event> findOne(@PathVariable("id") Long id){
-        return  new ResponseEntity<Event>( iEventService.findEventById(id) ,HttpStatus.FOUND);
+    public Event findOne(@PathVariable("id") Long id){
+        return  iEventService.findEventById(id);
     }
 
     @PutMapping("/update/{id}")

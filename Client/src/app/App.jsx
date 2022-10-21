@@ -1,27 +1,23 @@
-
+import '../fake-db';
+import { Provider } from 'react-redux';
 import { useRoutes } from 'react-router-dom';
 import { MatxTheme } from './components';
 import { AuthProvider } from './contexts/JWTAuthContext';
 import { SettingsProvider } from './contexts/SettingsContext';
+import { Store } from './redux/Store';
 import routes from './routes';
-import React, {useEffect} from "react";
-import axios from "../axios";
 
 const App = () => {
-    useEffect(() => {
-        const data = axios.get("http://localhost:8762/event-service/event/findAll");
-        console.log(data)
-    },[])
   const content = useRoutes(routes);
 
   return (
-
+    <Provider store={Store}>
       <SettingsProvider>
         <MatxTheme>
           <AuthProvider>{content}</AuthProvider>
         </MatxTheme>
       </SettingsProvider>
-
+    </Provider>
   );
 };
 
