@@ -14,6 +14,7 @@ export const navigations = [
     icon: "person",
     path: "/dashboard/employees",
   },
+<<<<<<< HEAD
 
 
 
@@ -26,6 +27,8 @@ export const navigations = [
 
 
 
+=======
+>>>>>>> 4a9d919c84f696a141c41f7a1a35f00ab1495058
   {
     name: "Session/Auth",
     icon: "security",
