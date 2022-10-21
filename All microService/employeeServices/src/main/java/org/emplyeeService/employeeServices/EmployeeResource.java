@@ -9,6 +9,7 @@ import org.emplyeeService.employeeServices.service.EmployeeService;
 import java.util.List;
 
 @RestController
+@CrossOrigin("*")
 @RequestMapping("/employee")
 public class EmployeeResource {
     private final EmployeeService employeeService;

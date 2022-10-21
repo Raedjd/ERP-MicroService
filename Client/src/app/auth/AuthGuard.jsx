@@ -6,7 +6,7 @@ import cookie from "js-cookie";
 const AuthGuard = ({ children }) => {
   const { pathname } = useLocation();
  let isAuthenticated = cookie.get("jwt")
-  let authenticated = isAuthenticated;
+  let authenticated = true;
 
 
 

@@ -16,16 +16,16 @@ const JwtLogin = () => {
 
     await axios({
       method: "post",
-      url: `${process.env.REACT_APP_API_URL}/auth/login`,
-
+      url: `http://localhost:8762/auth-service/auth/api/signin`,
       data: {
         username: username,
         password: password,
       },
     })
         .then((response) => {
-          if(response.data.token) {
-            cookie.set("jwt", response.data.token);
+          if(response.data.accessToken) {
+            console.log(response)
+            cookie.set("jwt", response.data.accessToken);
             navigate("/dashboard")}
             else{
               blockedError.innerHTML=response.data;
@@ -37,23 +37,18 @@ const JwtLogin = () => {
   }
 
   let token =cookie.get("jwt");
-  return !token ? (
+  return (
       <div>
         <header id="header" className="d-flex align-items-center">
           <div className="container d-flex justify-content-between">
 
-            <div className="logo">
-              <h1 className="text-light"><img
-                  src="https://thewealthmosaic.s3.amazonaws.com/media/New_Access_Logo_Positive_an_fnz_company-01.png"
-                  alt="New Access Logo Negative_an fnz company-01.png" style={{width:"117px" ,height:"150px"}}
-                  fetchpriority="high" /> </h1>
-            </div>
+
 
             <nav id="navbar" className="navbar">
               <div className="container d-flex justify-content-center justify-content-md-between">
                 <div className="contact-info d-flex align-items-center">
                   <i className="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">
-                    info@newaccess.ch</a></i>
+                    info@smartcode.com</a></i>
 
                 </div>
 
@@ -74,7 +69,7 @@ const JwtLogin = () => {
               <div className="carousel-item active" style={{backgroundImage:`url(assets/img/slide/slide-1.jpg)` }} >
                 <div className="carousel-container">
                   <div className="carousel-content animate__animated animate__fadeInUp">
-                    <h2 className="text-center">Welcome to <span>Intranet New Access </span></h2>
+                    <h2 className="text-center">Welcome to <span>ERP </span></h2>
                     <form className="text-center" onSubmit={handleLogin}>
                      <div className="opacity-50" >
                        <input type="text"  name="username"
@@ -167,10 +162,7 @@ const JwtLogin = () => {
 
       </div>
 
-  ):(
-
-      <Navigate to="404"/>
-  );
+  )
 };
 
 export default JwtLogin;
