@@ -1,6 +1,7 @@
 import Loadable from "app/components/Loadable";
 import { lazy } from "react";
 import { authRoles } from "../../auth/authRoles";
+import ListDepratments from "./departments/ListDepartments";
 import ListEmployee from "./employee/ListEmployee";
 
 import ListEvent from "./event/ListEvent";
@@ -23,14 +24,17 @@ const dashboardRoutes = [
     element: <ListEmployee />,
     auth: authRoles.admin,
   },
-
   {
-    path: "/dashboard/events",
-    element: <ListEvent/>,
+    path: "/dashboard/departments",
+    element: <ListDepratments />,
     auth: authRoles.admin,
   },
 
-
+  {
+    path: "/dashboard/events",
+    element: <ListEvent />,
+    auth: authRoles.admin,
+  },
 ];
 
 export default dashboardRoutes;

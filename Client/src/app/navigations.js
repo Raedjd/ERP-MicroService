@@ -10,21 +10,22 @@ export const navigations = [
     ],
   },
   {
+    name: "Departments",
+    icon: "apartment",
+    path: "/dashboard/departments",
+  },
+  {
     name: "Employees",
     icon: "person",
     path: "/dashboard/employees",
   },
 
-
-
-
-      { name: 'Events',
-        iconText: 'account_circle',
-        path: '/dashboard/events',
-        icon:  ' cake'
-      },
-
-
+  {
+    name: "Events",
+    iconText: "account_circle",
+    path: "/dashboard/events",
+    icon: " cake",
+  },
 
   {
     name: "Session/Auth",

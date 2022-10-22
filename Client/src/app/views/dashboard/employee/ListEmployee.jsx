@@ -113,7 +113,7 @@ const ListEmployee = () => {
                         style={{ color: "red", cursor: "pointer" }}
                         onClick={() => {
                           axios.delete(
-                            `http://localhost:8762/employee-service/employee/${e.id}`
+                            `http://localhost:8762/employee-service/employee/delete/${e.id}`
                           );
                           window.location.reload();
                         }}
