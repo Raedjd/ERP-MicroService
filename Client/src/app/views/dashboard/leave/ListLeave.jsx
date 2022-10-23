@@ -14,11 +14,11 @@ import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 import { Breadcrumb, SimpleCard } from "app/components";
 import axios from "axios";
 import { useState, useEffect } from "react";
-import SimpleTable from "../../material-kit/tables/SimpleTable";
-import AddEmployee, { getUserName } from "./AddSalary";
-import AddSalary from "./AddSalary";
+import  { getUserName } from "./AddLeave";
+import AddLeave from "./AddLeave";
 import UpdateSalary from "./UpdateSalary";
-import { Edit } from "@mui/icons-material";
+import { Add, CheckCircleOutline, DoDisturbOff, DoDisturbOn, Edit, PlusOneOutlined } from "@mui/icons-material";
+import Comments from "./Comments";
 
 const Container = styled("div")(({ theme }) => ({
   margin: "30px",
@@ -39,18 +39,19 @@ const StyledTable = styled(Table)(({ theme }) => ({
   },
 }));
 
-const ListSalary = () => {
+const ListLeave = () => {
   const [salaryData, setSalaryData] = useState([]);
   const [showAdd, setShowAdd] = useState(false);
   const [showUpdate, setShowUpdate] = useState(false);
   const [updateid, setUpdateid] = useState(false);
+  const[showComment, setShowComment] =useState(false);
   useEffect(() => {
     fetchSalary();
   }, [showAdd,showUpdate]);
   const fetchSalary = async () => {
     try {
       let data = await axios.get(
-        "http://localhost:8762/salary-management-service/salary/findAll"
+        "http://localhost:8762/leave-management-service/leave/findAll"
       );
       const salaries = data.data
       data = await axios.get(
@@ -70,13 +71,15 @@ const ListSalary = () => {
   };
   return (
     <Container>
-      {showAdd && <AddSalary setAddShow={setShowAdd} />}
+      {showAdd && <AddLeave setAddShow={setShowAdd} />}
+      {showComment && <Comments setAddShow={setShowComment} id={updateid} />}
       {showUpdate && <UpdateSalary setShowUpdate={setShowUpdate} id={updateid} />}
+
       <Box className="breadcrumb">
         <Breadcrumb
           routeSegments={[
-            { name: "List", path: "/salary" },
-            { name: "salarys" },
+            { name: "List", path: "/leave" },
+            { name: "leave" },
           ]}
         />
       </Box>
@@ -96,24 +99,21 @@ const ListSalary = () => {
           alignItems: "center",
         }}
       >
-        <PersonAddIcon style={{ marginRight: "16px" }} /> add employee
+        <PersonAddIcon style={{ marginRight: "16px" }} /> add leave
       </button>
 
-      <SimpleCard title="Salary Table">
+      <SimpleCard title="leaves Table">
         <Box width="100%" overflow="auto">
           <StyledTable>
             <TableHead>
               <TableRow>
                 <TableCell align="left">employee</TableCell>
-                <TableCell align="left">date</TableCell>
-                <TableCell align="center">Net pay</TableCell>
-                <TableCell align="center">Gross Pay</TableCell>
-                <TableCell align="center">Deducations</TableCell>
-                <TableCell align="center">tax</TableCell>
-                <TableCell align="center">overTime</TableCell>
-                <TableCell align="center">bonus</TableCell>
-                <TableCell align="center">other payements</TableCell>
-                <TableCell align="center">other deducations</TableCell>
+                <TableCell align="left">start_date</TableCell>
+                <TableCell align="center">end_date</TableCell>
+                <TableCell align="center">Payed</TableCell>
+                <TableCell align="center">type</TableCell>
+                <TableCell align="center">status</TableCell>
+                <TableCell align="center">comments</TableCell>
                 <TableCell align="right">Action</TableCell>
               </TableRow>
             </TableHead>
@@ -123,21 +123,32 @@ const ListSalary = () => {
                 salaryData.map((e, i) => (
                   <TableRow key={i}>
                     <TableCell align="left">{e.user}</TableCell>
-                    <TableCell align="left">{e.date}</TableCell>
-                    <TableCell align="center">{e.netPay ? e.netPay: 0}</TableCell>
-                    <TableCell align="center">{e.grossPay ? e.grossPay: 0}</TableCell>
-                    <TableCell align="center">{e.deducations ? e.deducations: 0}</TableCell>
-                    <TableCell align="center">{e.tax ? e.tax: 0}</TableCell>
-                    <TableCell align="center">{e.overTime ? e.overTime: 0}</TableCell>
-                    <TableCell align="center">{e.bonus ? e.bonus: 0}</TableCell>
-                    <TableCell align="center">{e.otherPayments ? e.otherPayements: 0}</TableCell>
-                    <TableCell align="center">{e.otherDeducation ? e.otherDecuctions: 0}</TableCell>
+                    <TableCell align="left">{e.start_date}</TableCell>
+                    <TableCell align="center" >{e.end_date}</TableCell>
+                    <TableCell align="center">{e.payed ? "yes" : "no"}</TableCell>
+                    <TableCell align="center">{e.type}</TableCell>
+                        
+                    <TableCell align="center" style={{ width:100, height: 70, backgroundColor: e.status==="declined"? "red" : e.status==="pending" ? "yellow": "green", cursor: "pointer" }}>{e.status}</TableCell>
+                    <TableCell align="center">
+                      <CheckCircleOutline style={{ color: "green", cursor: "pointer" }}  onClick={async () => {
+                          await axios.put(
+                            `http://localhost:8762/leave-management-service/leave/approve/${e.id}`
+                          );
+                          fetchSalary();
+                        }} />
+                      <DoDisturbOn   style={{ color: "red", cursor: "pointer" }}  onClick={async () => {
+                          await axios.put(
+                            `http://localhost:8762/leave-management-service/leave/decline/${e.id}`
+                          );
+                          fetchSalary();
+                        }}/>
+                    </TableCell>
                     <TableCell align="right">
                       <DeleteForeverIcon
                         style={{ color: "red", cursor: "pointer" }}
                         onClick={async () => {
                           await axios.delete(
-                            `http://localhost:8762/salary-management-service/salary/delete/${e.id}`
+                            `http://localhost:8762/leave-management-service/leave/delete/${e.id}`
                           );
                           fetchSalary();
                         }}
@@ -149,6 +160,9 @@ const ListSalary = () => {
                           setShowUpdate(true)
                         }}
                       />
+                      <Add  onClick={() =>{
+                          setUpdateid(e.id);
+                          setShowComment(true)}}/>
                     </TableCell>
                   </TableRow>
                 ))}
@@ -160,4 +174,4 @@ const ListSalary = () => {
   );
 };
 
-export default ListSalary;
+export default ListLeave;
