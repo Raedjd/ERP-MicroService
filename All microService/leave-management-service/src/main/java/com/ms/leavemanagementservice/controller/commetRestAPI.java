@@ -33,13 +33,11 @@ public class commetRestAPI {
     }
 
     @GetMapping("/findAll")
-    @ResponseStatus(HttpStatus.FOUND)
     public List<Comment> LeaveList(){
         return iCommentService.findAll();
     }
 
     @GetMapping("/findAllByLeave/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
     public List<Comment
             > LeaveListForUser(@PathVariable("id") String id){
         return iCommentService.findCommentsByLeaveId(id);
@@ -47,7 +45,7 @@ public class commetRestAPI {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Comment> findOne(@PathVariable("id") Long id){
-        return  new ResponseEntity<Comment>( iCommentService.findCommentById(id) ,HttpStatus.FOUND);
+        return  new ResponseEntity<Comment>( iCommentService.findCommentById(id) ,HttpStatus.OK);
     }
 
 

@@ -15,6 +15,11 @@ export const navigations = [
     path: "/dashboard/departments",
   },
   {
+    name: "Salary",
+    icon: "apartment",
+    path: "/dashboard/salary",
+  },
+  {
     name: "Employees",
     icon: "person",
     path: "/dashboard/employees",

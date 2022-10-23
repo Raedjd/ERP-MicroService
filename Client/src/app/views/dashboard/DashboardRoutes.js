@@ -5,6 +5,7 @@ import ListDepratments from "./departments/ListDepartments";
 import ListEmployee from "./employee/ListEmployee";
 
 import ListEvent from "./event/ListEvent";
+import ListSalary from "./salary/ListSalary";
 
 import Listusers from "./user/Listusers";
 import Profiluser from "./user/Profiluser";
@@ -27,6 +28,11 @@ const dashboardRoutes = [
   {
     path: "/dashboard/departments",
     element: <ListDepratments />,
+    auth: authRoles.admin,
+  },
+  {
+    path: "/dashboard/salary",
+    element: <ListSalary />,
     auth: authRoles.admin,
   },
 
