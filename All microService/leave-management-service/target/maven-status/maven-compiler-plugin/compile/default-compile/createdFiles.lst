@@ -1,7 +1,7 @@
-com\ms\leavemanagementservice\models\Leave.class
-com\ms\leavemanagementservice\controller\leaveRestAPI.class
-com\ms\leavemanagementservice\service\ILeaveService.class
-com\ms\leavemanagementservice\models\LeaveType.class
-com\ms\leavemanagementservice\service\LeaveServiceImpl.class
-com\ms\leavemanagementservice\LeaveManagementServiceApplication.class
-com\ms\leavemanagementservice\repository\LeaveRepository.class
+com/ms/leavemanagementservice/controller/leaveRestAPI.class
+com/ms/leavemanagementservice/models/Leave.class
+com/ms/leavemanagementservice/service/ILeaveService.class
+com/ms/leavemanagementservice/LeaveManagementServiceApplication.class
+com/ms/leavemanagementservice/models/LeaveType.class
+com/ms/leavemanagementservice/service/LeaveServiceImpl.class
+com/ms/leavemanagementservice/repository/LeaveRepository.class
