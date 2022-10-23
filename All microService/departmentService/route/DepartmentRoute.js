@@ -52,7 +52,7 @@ router.get("/EmployeePerDepartment", async (req, res) => {
   const departments = departmentss.map((e) => e.title);
   console.log(departments);
   const employees = await axios(
-    "http://localhost:8762/employee-service/employee/all"
+    "http://192.168.56.1:8762/employee-service/employee/all"
   );
   console.log(employees);
   const arr = [];
