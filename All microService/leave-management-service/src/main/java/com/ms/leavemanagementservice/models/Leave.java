@@ -1,11 +1,13 @@
 package com.ms.leavemanagementservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -15,7 +17,7 @@ import java.util.Date;
 public class Leave {
 
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
     private Long id;
 
     @Column(name = "userId")
@@ -36,4 +38,7 @@ public class Leave {
     @Temporal(TemporalType.TIMESTAMP)
     private Date end_date;
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "leave", cascade = CascadeType.ALL,orphanRemoval = true)
+    @JsonIgnore
+    private List<Comment> comments;
 }
