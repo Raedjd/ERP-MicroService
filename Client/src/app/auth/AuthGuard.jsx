@@ -30,7 +30,7 @@ const AuthGuard = ({ children }) => {
   // // UNCOMMENT ABOVE LINES
   // // AND COMMENT OUT BELOW authenticated VARIABLE
 
-  let authenticated = isAuthenticated;
+  let authenticated = true;
 
   return (
     <>

@@ -3,7 +3,8 @@ import { lazy } from "react";
 import { authRoles } from "../../auth/authRoles";
 import ListDepratments from "./departments/ListDepartments";
 import ListEmployee from "./employee/ListEmployee";
-
+import ListJobs from "./jobs/ListJobs";
+import  ListCandidacy from "./jobs/ListCandidacy"
 import ListEvent from "./event/ListEvent";
 
 import Listusers from "./user/Listusers";
@@ -18,10 +19,20 @@ const dashboardRoutes = [
     element: <Listusers />,
     auth: authRoles.admin,
   },
-  { path: "/dashboard/profil", element: <Profiluser />, auth: authRoles.admin },
+  { path: "/dashboard/roles", element: <Profiluser />, auth: authRoles.admin },
   {
     path: "/dashboard/employees",
-    element: <ListEmployee />,
+    element: <ListEmployee/>,
+    auth: authRoles.admin,
+  },
+  {
+    path: "/dashboard/jobs",
+    element: <ListJobs/>,
+    auth: authRoles.admin,
+  },
+  {
+    path: "/dashboard/jobs/candidacies",
+    element: <ListCandidacy/>,
     auth: authRoles.admin,
   },
   {

@@ -7,7 +7,7 @@ import { Formik } from 'formik';
 import { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
-
+import axios from "axios";
 const FlexBox = styled(Box)(() => ({ display: 'flex', alignItems: 'center' }));
 
 const JustifyBox = styled(FlexBox)(() => ({ justifyContent: 'center' }));
@@ -31,20 +31,25 @@ const JWTRoot = styled(JustifyBox)(() => ({
     alignItems: 'center',
   },
 }));
-
 // inital login credentials
 const initialValues = {
   email: 'jason@ui-lib.com',
   password: 'dummyPass',
   remember: true,
 };
+// inital login credentials
+/*const initialValues = {
+  username: '',
+  password: '',
+  remember: true,
+};*/
 
 // form field validation schema
 const validationSchema = Yup.object().shape({
   password: Yup.string()
-    .min(6, 'Password must be 6 character length')
+    .min(4, 'Password must be 6 character length')
     .required('Password is required!'),
-  email: Yup.string().email('Invalid Email address').required('Email is required!'),
+  username: Yup.string().required('Username is required!'),
 });
 
 const JwtLogin = () => {
@@ -56,12 +61,24 @@ const JwtLogin = () => {
 
   const handleFormSubmit = async (values) => {
     setLoading(true);
-    try {
+    /*try {
+      console.log(values);
+      await axios({
+        method: "post",
+        url: `http://localhost:8085/api/auth/signin`,
+        data: {
+          username: values.username,
+          password: values.password
+        },
+      }).then((response)=>{
+        localStorage.setItem('data', JSON.stringify(response.data));
+        navigate('/dashboard');
+      })
       await login(values.email, values.password);
       navigate('/');
     } catch (e) {
       setLoading(false);
-    }
+    }*/
   };
 
   return (
@@ -86,9 +103,9 @@ const JwtLogin = () => {
                     <TextField
                       fullWidth
                       size="small"
-                      type="email"
+                      type="text"
                       name="email"
-                      label="Email"
+                      label="email"
                       variant="outlined"
                       onBlur={handleBlur}
                       value={values.email}
@@ -144,15 +161,6 @@ const JwtLogin = () => {
                       Login
                     </LoadingButton>
 
-                    <Paragraph>
-                      Don't have an account?
-                      <NavLink
-                        to="/session/signup"
-                        style={{ color: theme.palette.primary.main, marginLeft: 5 }}
-                      >
-                        Register
-                      </NavLink>
-                    </Paragraph>
                   </form>
                 )}
               </Formik>

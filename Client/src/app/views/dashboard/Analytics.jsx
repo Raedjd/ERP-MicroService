@@ -58,7 +58,6 @@ const Analytics = () => {
                     type="text"
                     name="Name"
                     id="standard-basic"
-
                     label="Name of departemnt"
 
                 />

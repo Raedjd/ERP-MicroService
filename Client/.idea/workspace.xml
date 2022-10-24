@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a03a1465-869f-4ded-9801-afeb5685aa81" name="Changes" comment="" />
+    <list default="true" id="a03a1465-869f-4ded-9801-afeb5685aa81" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/views/dashboard/jobs/AddCandidacy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/views/dashboard/jobs/AddJob.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/views/dashboard/jobs/EditJob.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/views/dashboard/jobs/ListCandidacy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/views/dashboard/jobs/ListJobs.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/views/dashboard/user/AddUser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/auth/AuthGuard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth/AuthGuard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navigations.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navigations.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/Analytics.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/Analytics.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/DashboardRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/DashboardRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/user/Listusers.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/user/Listusers.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/dashboard/user/Profiluser.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/dashboard/user/Profiluser.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/views/sessions/JwtLogin.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/views/sessions/JwtLogin.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,19 +29,43 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2GSQZqi4pUk3xRDFKTo3YZ8veKT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="yarn" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/5Twin/MicroServices/ERP-MicroService/All microService/auth-service",
+    "nodejs_package_manager_path": "yarn"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\5Twin\MicroServices\ERP-MicroService\Client\src\app\views\dashboard\jobs" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Client" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Client" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -34,6 +77,10 @@
       <updated>1666379569189</updated>
       <workItem from="1666379570914" duration="7969000" />
       <workItem from="1666388120793" duration="110000" />
+      <workItem from="1666551027242" duration="587000" />
+      <workItem from="1666551649859" duration="18041000" />
+      <workItem from="1666603487266" duration="1916000" />
+      <workItem from="1666605634452" duration="29430000" />
     </task>
     <servers />
   </component>
@@ -50,6 +97,5 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
