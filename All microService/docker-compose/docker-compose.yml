@@ -133,3 +133,8 @@ services:
     environment:
       MONGO_URL: mongodb+srv://dzoviBackend:dzovic10dhiaovic@clusteryea.495j2ja.mongodb.net/departments?retryWrites=true&w=majority
       PORT: 3001
+  mailing:
+    build: ../Mailing-service
+    ports:
+      - "5000:5000"
+

@@ -1,6 +1,6 @@
-FROM alpine
-WORKDIR /usr/src/app1
-COPY package*.json .
-RUN npm ci
-COPY . .
+FROM node:16
+WORKDIR /index
+COPY package.json /index
+RUN npm install
+COPY . /index
 CMD ["npm","start"]
