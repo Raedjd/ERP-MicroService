@@ -25,20 +25,20 @@ public class salaryRestAPI {
     }
 
     @GetMapping("/findAll")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     public List<Salary> SalaryList(){
         return iSalaryService.findAll();
     }
 
     @GetMapping("/findAllByUser/{id}")
-    @ResponseStatus(HttpStatus.FOUND)
+    @ResponseStatus(HttpStatus.OK)
     public List<Salary> SalaryListForUser(@PathVariable("id") String id){
         return iSalaryService.findSalaryByUserId(id);
     }
 
     @GetMapping("/find/{id}")
     public ResponseEntity<Salary> findOne(@PathVariable("id") Long id){
-        return  new ResponseEntity<Salary>( iSalaryService.findSalaryById(id) ,HttpStatus.FOUND);
+        return  new ResponseEntity<Salary>( iSalaryService.findSalaryById(id) ,HttpStatus.OK);
     }
 
     @PutMapping("/update/{id}")

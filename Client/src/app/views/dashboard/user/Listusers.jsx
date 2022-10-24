@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import AddUser from './AddUser';
+import { Add, CheckCircleOutline, DoDisturbOff, DoDisturbOn, Edit, PlusOneOutlined } from "@mui/icons-material";
 const Container = styled("div")(({ theme }) => ({
     margin: "30px",
     [theme.breakpoints.down("sm")]: { margin: "16px" },
@@ -29,7 +30,7 @@ const StyledTable = styled(Table)(({ theme }) => ({
 
 
 
-const Listusers = () => {
+const Listusers = ( {email}) => {
     const [usersData, setUsersData] = useState([]);
     const [showAdd, setShowAdd] = useState(false);
     useEffect(() => {
@@ -45,6 +46,19 @@ const Listusers = () => {
             console.log(err);
         }
     };
+
+    const sendEmail= async () => {
+        await axios({
+            method: "post",
+            url: `http://localhost:5000/api/send_email`,
+            data: {
+                email:email
+            },
+        }).then((response)=>{
+            window.location.reload();
+        })
+    };
+
     return (
 
         <Container>
@@ -79,6 +93,7 @@ const Listusers = () => {
                                 <TableCell align="left">username</TableCell>
                                 <TableCell align="left">email</TableCell>
                                 <TableCell align="left">role</TableCell>
+                                <TableCell align="left">Send invitation</TableCell>
                                 <TableCell align="left">
                                     Edit
                                 </TableCell>
@@ -93,6 +108,11 @@ const Listusers = () => {
                                     <TableCell align="left">{e.username}</TableCell>
                                     <TableCell align="left" style={{textOverflow: 'ellipsis',overflow: 'hidden',whiteSpace: 'nowrap' }}>{e.email}</TableCell>
                                     <TableCell align="left">{e.roles[0].name}</TableCell>
+                                    <TableCell align="left">
+                                    <CheckCircleOutline style={{ color: "green", cursor: "pointer" }} key={i}  email={e.email} onClick={ () => {sendEmail()}} ></CheckCircleOutline>
+                                 
+
+                                    </TableCell>
                                     <TableCell align="left">
                                         <EditIcon/>
                                     </TableCell>
