@@ -30,7 +30,7 @@ import java.util.stream.Collectors;
 
 
 @RestController
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", maxAge = 3600)
 @RequestMapping("/api/auth")
 public class AuthController {
     @Autowired
@@ -139,5 +139,10 @@ public class AuthController {
     @PostMapping("/addRole")
     public ResponseEntity<Role>saveRole(@RequestBody Role role){
         return new ResponseEntity<Role>( roleRepository.save(role), HttpStatus.CREATED) ;
+    }
+
+    @GetMapping("/findAllRoles")
+    public List<Role> retrieveAllRoles(){
+        return roleRepository.findAll();
     }
 }
