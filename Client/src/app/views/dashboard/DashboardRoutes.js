@@ -4,13 +4,14 @@ import { authRoles } from "../../auth/authRoles";
 import ListDepratments from "./departments/ListDepartments";
 import ListEmployee from "./employee/ListEmployee";
 import ListJobs from "./jobs/ListJobs";
-import  ListCandidacy from "./jobs/ListCandidacy"
+import ListCandidacy from "./jobs/ListCandidacy";
 import ListEvent from "./event/ListEvent";
 import ListLeave from "./leave/ListLeave";
 import ListSalary from "./salary/ListSalary";
 
 import Listusers from "./user/Listusers";
 import Profiluser from "./user/Profiluser";
+import ListEntretien from "./entretien/ListEntretien";
 
 const Analytics = Loadable(lazy(() => import("./Analytics")));
 
@@ -24,17 +25,22 @@ const dashboardRoutes = [
   { path: "/dashboard/roles", element: <Profiluser />, auth: authRoles.admin },
   {
     path: "/dashboard/employees",
-    element: <ListEmployee/>,
+    element: <ListEmployee />,
+    auth: authRoles.admin,
+  },
+  {
+    path: "/dashboard/entretien",
+    element: <ListEntretien />,
     auth: authRoles.admin,
   },
   {
     path: "/dashboard/jobs",
-    element: <ListJobs/>,
+    element: <ListJobs />,
     auth: authRoles.admin,
   },
   {
     path: "/dashboard/jobs/candidacies",
-    element: <ListCandidacy/>,
+    element: <ListCandidacy />,
     auth: authRoles.admin,
   },
   {

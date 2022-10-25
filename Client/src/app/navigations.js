@@ -15,11 +15,16 @@ export const navigations = [
     path: "/dashboard/departments",
   },
   {
-
+    name: "Interview",
+    icon: "person",
+    path: "/dashboard/entretien",
+  },
+  {
     name: "Jobs",
     icon: "work",
     path: "/dashboard/jobs",
-  },{
+  },
+  {
     name: "Salary",
     icon: "apartment",
     path: "/dashboard/salary",
@@ -27,7 +32,8 @@ export const navigations = [
   {
     name: "Leave",
     icon: "apartment",
-    path: "/dashboard/leave"},
+    path: "/dashboard/leave",
+  },
   {
     name: "Employees",
     icon: "person",
@@ -39,5 +45,5 @@ export const navigations = [
     iconText: "account_circle",
     path: "/dashboard/events",
     icon: " cake",
-  }
+  },
 ];
