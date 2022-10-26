@@ -4,8 +4,6 @@ import axios from "axios";
 
 const EditEvent = ({idEvent} , { setAddShow }) => {
 
-
-
     const [title,setTitle]=useState("");
     const [description,setDescription]=useState("");
     const [place,setPlace]=useState("");

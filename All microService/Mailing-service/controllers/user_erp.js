@@ -6,7 +6,6 @@ module.exports.email_rh= async (req ,res) => {
     try{
 
         sendEmail(email)
-       return res.status(200)
     } catch (err) {
         return res.status(500).json({ msg: err });
     }

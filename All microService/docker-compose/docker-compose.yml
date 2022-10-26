@@ -129,10 +129,10 @@ services:
   department:
     build: ../departmentService
     ports:
-      - 3001:3001
+      - 3002:3002
     environment:
       MONGO_URL: mongodb+srv://dzoviBackend:dzovic10dhiaovic@clusteryea.495j2ja.mongodb.net/departments?retryWrites=true&w=majority
-      PORT: 3001
+      PORT: 3002
   mailing:
     build: ../Mailing-service
     ports:
